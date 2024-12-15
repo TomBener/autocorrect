@@ -10,9 +10,9 @@ jobs:
       - uses: actions/checkout@master
       - name: Install gettext
         run: |
-          brew install gettext
+          arch -x86_64 brew install gettext
           sudo mkdir -p /usr/local/opt/gettext/lib
-          sudo ln -s /opt/homebrew/opt/gettext/lib/libintl.8.dylib /usr/local/opt/gettext/lib/libintl.8.dylib
+          sudo ln -s /usr/local/opt/gettext/lib/libintl.8.dylib /usr/local/opt/gettext/lib/libintl.8.dylib
       - uses: actions/setup-python@v4
         with:
           python-version: "3.10"
